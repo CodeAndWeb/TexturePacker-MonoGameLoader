@@ -4,4 +4,4 @@ Now this maybe nothing new to a lot of people, however what you might not know, 
 
 See this tutorial for an example of how to use this Nuget with either Xamarin Studio (targetting iOS) or Visual Studio (targetting Windows 8 store apps)....
 
-http://randolphburt.co.uk/2014/08/06/animation-made-easy-in-monogame-with-texturepacker
+http://randolphburt.co.uk/2014/08/08/animation-made-easy-in-monogame-with-texturepacker
