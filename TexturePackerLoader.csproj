@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.1.0</Version>
+    <Authors>Joachim Grill</Authors>
+    <Company>CodeAndWeb GmbH</Company>
+    <PackageId>TexturePacker-MonoGameLoader</PackageId>
+    <Title>TexturePacker-MonoGameLoader</Title>
+    <Description>Using a sprite sheet (or texture atlas) increases your game's performance while also reducing the amount of memory.
+
+This library includes a loader and sprite renderer to load animations and sprites from a sprite sheet created with TexturePacker. Its source code can be found on https://github.com/CodeAndWeb/TexturePacker-MonoGameLoader
+
+A tutorial with full source code about how to create sprite sheets is available from https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-and-animations-with-monogame
+
+The tutorial contains additional modules like an animation manager for simple playback of animated sprites.</Description>
+    <Copyright>CodeAndWeb GmbH</Copyright>
+    <PackageProjectUrl>https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-and-animations-with-monogame</PackageProjectUrl>
+    <PackageIcon>Icon.png</PackageIcon>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/CodeAndWeb/TexturePacker-MonoGameLoader</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>MonoGame TexturePacker Sprite sheet spritesheet animation texture atlas SpriteBatch Texture2D Packer</PackageTags>
+    <PackageReleaseNotes>Update for MonoGame 3.8.1 and Visual Studio 2022</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageOutputPath>..</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="tools\init.ps1">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
