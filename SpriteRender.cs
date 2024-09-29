@@ -8,7 +8,7 @@ namespace TexturePackerLoader
     {
         private const float ClockwiseNinetyDegreeRotation = (float)(Math.PI / 2.0f);
 
-        private SpriteBatch spriteBatch;
+        protected SpriteBatch spriteBatch;
 
         public SpriteRender (SpriteBatch spriteBatch)
         {
