@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
-    <Authors>Joachim Grill</Authors>
+    <Version>1.2.0</Version>
+    <Authors>CodeAndWeb GmbH</Authors>
     <Company>CodeAndWeb GmbH</Company>
     <PackageId>TexturePacker-MonoGameLoader</PackageId>
     <Title>TexturePacker-MonoGameLoader</Title>
@@ -24,7 +24,7 @@ The tutorial contains additional modules like an animation manager for simple pl
     <RepositoryUrl>https://github.com/CodeAndWeb/TexturePacker-MonoGameLoader</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>MonoGame TexturePacker Sprite sheet spritesheet animation texture atlas SpriteBatch Texture2D Packer</PackageTags>
-    <PackageReleaseNotes>Update for MonoGame 3.8.1 and Visual Studio 2022</PackageReleaseNotes>
+    <PackageReleaseNotes>added Draw() method for sprites as extension to SpriteBatch class; updated to MonoGame 3.8.4 </PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageOutputPath>..</PackageOutputPath>
   </PropertyGroup>
@@ -37,7 +37,7 @@ The tutorial contains additional modules like an animation manager for simple pl
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.4" />
   </ItemGroup>
 
   <ItemGroup>
