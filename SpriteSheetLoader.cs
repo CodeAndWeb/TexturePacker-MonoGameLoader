@@ -15,14 +15,17 @@ namespace TexturePackerLoader
     public class SpriteSheetLoader
     {
         private readonly ContentManager contentManager;
-        private readonly GraphicsDevice graphicsDevice;
 
-        public SpriteSheetLoader(ContentManager contentManager, GraphicsDevice graphicsDevice)
+        public SpriteSheetLoader(ContentManager contentManager)
         {
             this.contentManager = contentManager;
-            this.graphicsDevice = graphicsDevice;
         }
 
+        /// <summary>
+        /// Loads multiple numbered sprite sheets using a format string and combines them into a single SpriteSheet object.
+        /// </summary>
+        /// <param name="imageResourceFormat">Format string for the sprite sheet names (e.g., "sprites{0}")</param>
+        /// <param name="numSheets">Number of sprite sheets to load</param>
         public SpriteSheet MultiLoad(string imageResourceFormat, int numSheets)
         {
             SpriteSheet result = new SpriteSheet();
@@ -36,17 +39,15 @@ namespace TexturePackerLoader
             return result;
         }
 
-
+        /// <summary>
+        /// Loads a single sprite sheet from a texture and its associated data file.
+        /// </summary>
+        /// <param name="imageResource">Name of the sprite sheet (without file extension)</param>
         public SpriteSheet Load(string imageResource)
         {
-            var imageFile = Path.Combine(contentManager.RootDirectory, imageResource);
-            var dataFile = Path.ChangeExtension(imageFile, "txt");
+            var texture = contentManager.Load<Texture2D>(imageResource);
 
-            FileStream fileStream = new FileStream(imageFile, FileMode.Open);
-            var texture = Texture2D.FromStream(graphicsDevice, fileStream);
-            fileStream.Dispose();
-
-
+            var dataFile = Path.Combine(contentManager.RootDirectory, imageResource + ".txt");
             var dataFileLines = ReadDataFile(dataFile);
 
             var sheet = new SpriteSheet();

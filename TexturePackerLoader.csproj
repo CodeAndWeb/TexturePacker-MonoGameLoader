@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.2.0</Version>
+    <Version>2.0.0</Version>
     <Authors>CodeAndWeb GmbH</Authors>
     <Company>CodeAndWeb GmbH</Company>
     <PackageId>TexturePacker-MonoGameLoader</PackageId>
@@ -24,7 +24,7 @@ The tutorial contains additional modules like an animation manager for simple pl
     <RepositoryUrl>https://github.com/CodeAndWeb/TexturePacker-MonoGameLoader</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>MonoGame TexturePacker Sprite sheet spritesheet animation texture atlas SpriteBatch Texture2D Packer</PackageTags>
-    <PackageReleaseNotes>added Draw() method for sprites as extension to SpriteBatch class; updated to MonoGame 3.8.4 </PackageReleaseNotes>
+    <PackageReleaseNotes>Load texture image via content pipeline, sprite sheet name must be passed now without file extension.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageOutputPath>..</PackageOutputPath>
   </PropertyGroup>
